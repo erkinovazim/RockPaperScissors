@@ -33,18 +33,10 @@ namespace RockPaperScissors
 
         private void DisplayTable()
         {
-            string[,] table = tableGenerator.GenerateTable();
-            int count = moves.Length;
+            string table = tableGenerator.GenerateTable();
 
             Console.WriteLine("Game Table:");
-            for (int i = 0; i <= count; i++)
-            {
-                for (int j = 0; j <= count; j++)
-                {
-                    Console.Write("{0,-5}", table[i, j]);
-                }
-                Console.WriteLine();
-            }
+            Console.WriteLine(table);
             Console.WriteLine();
         }
 
